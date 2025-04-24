@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamisch Ingrediënt Aanmaken</title>
+  <link rel="stylesheet" href="../Styles/style.css" />
+  <link rel="stylesheet" href="../Styles/textures.css" />
+</head>
+<body>
+  <h1>Dynamisch Ingrediënt Aanmaken</h1>
+
+  <div class="container">
+    <div class="left">
+      <form id="ingredientForm">
+        <label>Naam:</label>
+        <input type="text" id="name" required />
+
+        <label>Mengtijd (sec):</label>
+        <input type="number" id="mengtijd" min="1" required />
+
+        <label>Mengsnelheid:</label>
+        <input type="number" id="mengsnelheid" min="1" required />
+
+        <label>Kleur (RGB of HSL):</label>
+        <input type="text" id="color" placeholder="e.g. rgb(255,0,0) of hsl(0,100%,50%)" required />
+
+        <label>Structuur:</label>
+        <select id="structuur">
+          <option value="korrelig">Korrelig</option>
+          <option value="grof">Grof</option>
+          <option value="glad">Glad</option>
+          <option value="slijmerig">Slijmerig</option>
+        </select>
+
+        <button type="submit">Maak ingrediënt aan</button>
+      </form>
+    </div>
+
+    <div class="right">
+      <h2>Aangemaakte Ingrediënten</h2>
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <script src="../Scripts/create_ingredient.js"></script>
+</body>
