@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamisch Ingrediënt Aanmaken</title>
-  <link rel="stylesheet" href="../Styles/style.css" />
-  <link rel="stylesheet" href="../Styles/textures.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potten Mengen</title>
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/textures.css" />
 </head>
 <body>
-  <h1>Dynamisch Ingrediënt Aanmaken</h1>
+    <div class="main-container">
+        <div class="left-panel">
+            <form id="ingredientForm">
+                <label>Naam:</label>
+                <input type="text" id="name" required />
 
-  <div class="container">
-    <div class="left">
-      <form id="ingredientForm">
-        <label>Naam:</label>
-        <input type="text" id="name" required />
+                <label>Mengtijd:</label>
+                <input type="text" id="mengid" required />
 
-        <label>Mengtijd (sec):</label>
-        <input type="number" id="mengtijd" min="1" required />
+                <label>Mengresultaat:</label>
+                <input type="text" id="mengresultaat" required />
 
-        <label>Mengsnelheid:</label>
-        <input type="number" id="mengsnelheid" min="1" required />
+                <label>Kleur (RGB of HEX):</label>
+                <input type="text" id="color" required />
 
-        <label>Kleur (RGB of HSL):</label>
-        <input type="text" id="color" placeholder="e.g. rgb(255,0,0) of hsl(0,100%,50%)" required />
+                <label>Structuur:</label>
+                <select id="structuur">
+                    <option value="korrel">Korrel</option>
+                </select>
 
-        <label>Structuur:</label>
-        <select id="structuur">
-          <option value="korrelig">Korrelig</option>
-          <option value="grof">Grof</option>
-          <option value="glad">Glad</option>
-          <option value="slijmerig">Slijmerig</option>
-        </select>
+                <button type="submit">Voeg ingrediënt toe</button>
+            </form>
 
-        <button type="submit">Maak ingrediënt aan</button>
-      </form>
+            <div class="ingredients-list">
+                <h3>Aangemaakte Ingrediënten</h3>
+                <div id="output"></div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="meng-button">
+                <h1>meng</h1>
+            </div>
+            <div class="mixing-area">
+                <h1>plek om potten te mengen</h1>
+            </div>
+            <div class="result-text">
+                resultaat na mengen resultaat na mengen
+                <br>
+                resultaat na mengen resultaat na mengen
+            </div>
+            <div class="pots-container">
+                <div class="pot">
+                    <h2>pot 1</h2>
+                </div>
+                <div class="pot">
+                    <h2>pot 2</h2>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="right">
-      <h2>Aangemaakte Ingrediënten</h2>
-      <div id="output"></div>
-    </div>
-  </div>
-
-  <script src="../Scripts/create_ingredient.js"></script>
+    <script src="../Scripts/create_ingredient.js"></script>
 </body>
+</html>
