@@ -34,6 +34,7 @@ class PotManager {
         // Create two default pots in specified hall
         this.createPot(hallId, 'Pot 1');
         this.createPot(hallId, 'Pot 2');
+        this.createPot(hallId, 'Pot 3');
     }
 
     /**
