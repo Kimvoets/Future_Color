@@ -1,0 +1,108 @@
+.color-test-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.grid-cell {
+    aspect-ratio: 1;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.grid-cell:hover {
+    border-color: #2196F3;
+}
+
+.grid-cell.filled:hover {
+    opacity: 0.8;
+}
+
+.mixed-results-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.mixed-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.mixed-color-box {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mixed-color-box:hover {
+    transform: scale(1.05);
+}
+
+.mixed-color-box.selected {
+    border-color: #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.3);
+}
+
+.instruction {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.color-palette {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mixed-colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.color-popup {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.popup-content {
+    width: 200px;
+}
+
+.triadic-colors {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.color-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.color-values {
+    font-size: 13px;
+    color: #666;
+}

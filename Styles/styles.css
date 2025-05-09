@@ -1,0 +1,43 @@
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.left-sidebar {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mixed-results-section {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mixed-pots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}

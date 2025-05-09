@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potten Mengen</title>
+    <link rel="stylesheet" href="Styles/style.css" />
+    <link rel="stylesheet" href="Styles/textures.css" />
+</head>
+<body>
+    <div class="main-container">
+        <!-- New navigation position -->
+        <div class="left-panel">
+            <div class="navigation-container">
+                <div class="nav-buttons">
+                    <button id="colorTestNav">Kleurentest</button>
+                </div>
+                <div class="control-buttons">
+                    <button id="resetButton" class="danger">Reset</button>
+                </div>
+            </div>
+            <form id="ingredientForm">
+                <label>Naam:</label>
+                <input type="text" id="name" required />
+
+                <label>Mengtijd (seconden):</label>
+                <input type="number" id="mixTime" min="1" required />
+
+                <label>Mengsnelheid (RPM):</label>
+                <input type="number" id="mixSpeed" min="1" required />
+
+                <label>Kleurtype:</label>
+                <select id="colorType">
+                    <option value="RGB">RGB</option>
+                    <option value="HSL">HSL</option>
+                </select>
+
+                <div id="colorInputs">
+                    <div class="color-group">
+                        <label>R:</label>
+                        <input type="number" id="r" min="0" max="255" required />
+                        <label>G:</label>
+                        <input type="number" id="g" min="0" max="255" required />
+                        <label>B:</label>
+                        <input type="number" id="b" min="0" max="255" required />
+                    </div>
+                </div>
+
+                <label>Structuur:</label>
+                <select id="structuur">
+                    <option value="korrelig">Korrelig</option>
+                    <option value="grof">Grof</option>
+                    <option value="glad">Glad</option>
+                    <option value="slijmerig">Slijmerig</option>
+                </select>
+
+                <button type="submit">Voeg ingrediënt toe</button>
+            </form>
+
+            <div class="ingredients-list">
+                <h3>Aangemaakte Ingrediënten</h3>
+                <div id="output"></div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="hall-controls">
+                <button id="hall1Button" class="active">Hal 1</button>
+                <button id="hall2Button">Hal 2</button>
+            </div>
+
+            <div id="hall1" class="mixing-hall active">
+                <button id="addPotButton">Nieuwe Pot</button>
+                <div class="pots-area">
+                    <div class="pots-container"></div>
+                </div>
+                
+                <button class="add-machine-button" data-hall="1">+ Nieuwe Machine</button>
+                <div class="machines-container">
+                    <div class="mixing-machines-grid"></div>
+                </div>
+            </div>
+
+            <div id="hall2" class="mixing-hall">
+                <button id="addPotButton2">Nieuwe Pot</button>
+                <div class="pots-area">
+                    <div class="pots-container"></div>
+                </div>
+                
+                <button class="add-machine-button" data-hall="2">+ Nieuwe Machine</button>
+                <div class="machines-container">
+                    <div class="mixing-machines-grid"></div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h3>Gemengde Resultaten</h3>
+                <div class="mixed-pots-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update the weather-controls div -->
+    <div class="weather-controls">
+        <form id="locationForm" class="location-form">
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Zoek een stad..." autocomplete="off">
+                <div class="location-suggestions"></div>
+            </div>
+            <button type="submit" class="weather-submit">Update Weer</button>
+        </form>
+        <div class="weather-circumstances">
+            <div class="current-weather"></div>
+            <div class="weather-effects"></div>
+        </div>
+    </div>
+    <!-- Add this before other scripts -->
+    <script src="Scripts/test_data.js"></script>
+    <script src="Scripts/config.js"></script>
+    <script src="Scripts/weather_service.js"></script>
+    <script src="Scripts/create_ingredient.js"></script>
+    <script src="Scripts/mixing_machine.js"></script>
+    <script src="Scripts/pot_manager.js"></script>
+</body>
+</html>
